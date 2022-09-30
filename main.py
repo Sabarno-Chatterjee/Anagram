@@ -1,16 +1,21 @@
-# This is a sample Python script.
+import random
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+word = "lick"
+word_list = []
+anagram = ""
+new = []
+length = len(word)
+k = ""
+for i in range(0, length):
+    word_list.append(word[i])
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(word_list)
+is_true = True
+while is_true:
+    k = random.choice(word_list)
+    if k not in new:
+        new.append(k)
+        length -= 1
+    if length == 0 :
+        is_true = False
+print(new)
