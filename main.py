@@ -19,3 +19,5 @@ while is_true:
     if length == 0 :
         is_true = False
 print(new)
+
+#Need to alter for words with same letters; eg : "book"
